@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* padding: 2% 10%; */
+  font-family: "Montserrat", sans-serif;
+}
+
+.combo-select-dropdown input,
+.combo-select-dropdown li {
+  padding: 0.6rem 1rem;
+  margin: 0;
+}
+
+.combo-select-dropdown li {
+  position: relative;
+  font-size: 12px;
+}
+
+.combo-select-dropdown ul {
+  list-style: none;
+  padding: 0;
+}
+
+.combo-select-dropdown li li:hover {
+  color: white;
+  background-color: grey;
+}
+
+.combo-select-dropdown li li.current {
+  color: white;
+  background-color: pink;
+}
+
+.combo-select-dropdown li li.active {
+  color: white;
+  background-color: skyblue;
+}
+
+.select-list-group {
+  position: relative;
+}
+
+.select-list-group,
+.select-list-group * {
+  width: 100%;
+}
+
+.select-list-group
+  .select-list-group-search
+  + .select-list-group__toggle:after {
+  content: "v";
+  font-family: sans-serif;
+  position: absolute;
+  top: 0.6rem;
+  right: 0.7rem;
+  width: 2rem;
+  padding: 0.6rem;
+  text-align: center;
+}
+
+.select-list-group
+  .select-list-group-search:focus
+  + .select-list-group__toggle:after {
+  content: "^";
+}
+
+.select-list-group [data-toggle="false"] {
+  display: none;
+}
+
+.select-list-group [data-toggle="true"] {
+  display: inherit;
+  box-shadow: 0 3px 7px -2px rgb(0 0 0 / 20%);
+  position: absolute;
+  z-index: 9999;
+  left: 0px;
+  top: 46px;
+  width: 44.4em;
+}
+
+.select-list-group li[data-display="false"] {
+  display: none;
+}
+
+.select-list-group li[data-display="true"] {
+  display: inherit;
+}
+
+.select-list-group li[data-highlight="false"] {
+  border-left: 0;
+  background-color: #fff;
+}
+
+.select-list-group li[data-highlight="true"] {
+  color: white;
+  background-color: grey;
+}
+
+.select-list-group::after {
+  position: absolute;
+  right: 0;
+  margin-right: -5px;
+  top: 25px;
+  right: 35px;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: url(https://image.flaticon.com/icons/png/512/25/25756.png);
+  background-repeat: no-repeat;
+  background-size: 10px 10px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown::before {
+  position: absolute;
+  content: ">";
+  top: 30px;
+  right: 30px;
+  height: 20px;
+  width: 20px;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  font: 17px "Consolas", monospace;
+  color: #333;
+}
+
+.txtSearch:focus {
+  border-color: transparent;
+}
+:focus-visible {
+  outline: none;
+}
+/* button[type="submit"] {
+  text-indent: -999px;
+  overflow: hidden;
+  width: 40px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid transparent;
+  border-radius: inherit;
+  background: transparent
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E")
+    no-repeat center;
+  cursor: pointer;
+  opacity: 0.7;
+} */
+
+/* button[type="submit"]:hover {
+  opacity: 1;
+}
+
+button[type="submit"]:focus{
+  box-shadow: 0 0 3px 0 #1183d6;
+  border-color: #1183d6;
+  outline: none;
+} */
